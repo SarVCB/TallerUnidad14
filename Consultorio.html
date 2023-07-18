@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de Consultorio</title>
+</head>
+<body>
+  <h2>Formulario de Consultorio</h2>
+  <form id="formulario"
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" name="tipo" required onchange="mostrarConsultorio()">
+      <option value="" disabled selected>Seleccionar</option>
+      <option value="paciente">Paciente</option>
+      <option value="doctor">Doctor</option>
+    </select><br><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" required><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" required><br><br>
+
+    <label for="cedula">Número de cedula:</label>
+    <input type="text" id="cedula" name="cedula" pattern="[0-9]+" required><br><br>
+
+    <label for="correo">Correo de contacto:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <div id="consultorioSection">
+        <label for="consultorio" id="labelConsultorio">Consultorio:</label>
+        <input type="text" id="consultorio" name="consultorio"><br><br>
+      </div>
+  
+
+    <label for="especialidad">Especialidad requerida:</label>
+    <select id="especialidad" name="especialidad" required>
+      <option value="" disabled selected>Seleccionar</option>
+      <option value="Medicina general">Medicina general</option>
+      <option value="Cardiología">Cardiología</option>
+      <option value="Medicina interna">Medicina interna</option>
+      <option value="Dermatología">Dermatología</option>
+      <option value="Rehabilitación física">Rehabilitación física</option>
+      <option value="Psicología">Psicología</option>
+      <option value="Odontología">Odontología</option>
+      <option value="Radiología">Radiología</option>
+    </select><br><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+  
+  <script src="script.js"></script>
+</body>
+</html>
